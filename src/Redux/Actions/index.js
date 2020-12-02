@@ -18,3 +18,9 @@ export const setLoginError = (errorMessage) => {
         payload : errorMessage
     }
 }
+
+export const getUsers = () => {
+    return{
+        type : 'GET_USERS'
+    }
+}

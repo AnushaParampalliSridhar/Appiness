@@ -7,6 +7,7 @@ import Login from '../../Components/Login/Login';
 class LoginPage extends React.Component{
     
     render(){
+        console.log(this.props.loggedInUser);
         if(this.props.loggedInUser){
             return <Redirect to="/dashboard"/>
         }

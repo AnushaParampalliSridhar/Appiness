@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
-import {loggedInUser} from '../Reducers/loggedInUser';
-import {loginError} from '../Reducers/loginError';
+import {loggedInUser} from './loggedInUser';
+import {loginError} from './loginError';
+import {UserReducer} from './users';
 
 export default combineReducers({
     loggedInUser : loggedInUser,
-    loginError : loginError
+    loginError : loginError,
+    users : UserReducer
 })

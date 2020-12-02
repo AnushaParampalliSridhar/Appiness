@@ -1,9 +1,88 @@
 .dashboardPage{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
+}
+
+.users-container{
+    width: 40%;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.users-container li {
+    list-style: none;
+    padding: 1rem;
+    border : 1px solid gray;
+    margin-bottom: 1rem;
+}
+
+.users-container li .field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.users-container li .field strong{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.users-container li .field span{
+    font-size: 1.2rem;
+}
+
+.users-container li .field:last-of-type{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width : 1000px){
+    .users-container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 800px){
+    .users-container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .users-container{
+        width: 80%;
+    }
+
+    .users-container li .field strong{
+        font-size: 1.1rem;
+    }
+    
+    .users-container li .field span{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width : 480px){
+    .users-container{
+        width: 100%;
+    }
+
+    .users-container li .field strong{
+        font-size: 1rem;
+    }
+    
+    .users-container li .field span{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 350px){
+    .dashboardPage{
+        padding: 0.5rem;
+    }
 }
