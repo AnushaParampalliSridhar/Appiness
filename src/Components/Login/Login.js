@@ -21,7 +21,6 @@ class Login extends React.Component{
     }
 
     handleSubmit = () => {
-        console.log("hit");
         if(this.state.username===''&&this.state.password===''){
             this.props.setLoginError('Username and password should not be empty');
         }else if(this.state.username===''){
@@ -30,13 +29,19 @@ class Login extends React.Component{
             this.props.setLoginError('Password should not be empty');
         }else if(!validator.isEmail(this.state.username)){
             this.props.setLoginError('Please enter a valid email id');
+            this.setState({
+                username : ''
+            })
         }else{
             this.props.login(this.state.username,this.state.password);
+            this.setState({
+                username : '',
+                password : ''
+            })
         }
     }
 
     render(){
-        console.log(this.props.loginError);
         return(
             <div className="login-container">
                 {this.props.loginError!==''?

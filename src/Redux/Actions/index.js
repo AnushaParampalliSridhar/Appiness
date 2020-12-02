@@ -1,5 +1,5 @@
 export const login = (username,password) => {
-    if(username!=="hruday@gmail.com"&&password!="hruday123"){
+    if(username!=="hruday@gmail.com"&&password!=="hruday123"){
         return{
             type : "SET_LOGIN_ERROR",
             payload : "Not a valid user"

@@ -1,19 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import './LoginPage.css';
-import Login from '../../Components/Login/Login';
+import './DashboardPage.css';
 
-class LoginPage extends React.Component{
+class DashboardPage extends React.Component{
     
     render(){
-        if(this.props.loggedInUser){
-            return <Redirect to="/dashboard"/>
+        if(this.props.loggedInUser===null){
+            return <Redirect to="/"/>
         }
         return(
-            <div className="loginPage">
+            <div className="dashboardPage">
                 <h1 className="title">Appiness Interactive</h1>
-                <Login/>
             </div>
         )
     }
@@ -25,4 +23,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps,null)(LoginPage);
+export default connect(mapStateToProps,null)(DashboardPage);
